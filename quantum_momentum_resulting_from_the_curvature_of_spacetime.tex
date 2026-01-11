@@ -23,7 +23,8 @@
 \maketitle
 
 \begin{abstract}
-In quantum mechanics, the momentum of a particle is expressed as an operator 
+In quantum mechanics, the momentum of a particle is expressed as an operator  
+\newline In this paper, we propose a modification to the momentum operator for a particle constrained to a curved one-dimensional manifold. We hypothesize that the geometric curvature $R$ induces a "quantum compression" effect, leading to an additional momentum term $Z \propto \sqrt{R}$. 
 \begin{equation}
    \hat{p}=-\mathrm{i}\hbar\boldsymbol{\nabla}
 \end{equation}
@@ -39,6 +40,14 @@ However, this equation assumes that spacetime is flat, but if spacetime becomes 
 \section{Introduction}
 \label{sec:intro}
 Quantum particles moving in curved space gain additional momentum resulting from this curvature.
+ \section{Theoretical Framework}
+Assuming a particle moves along a curved 1D path, the modified momentum operator $\hat{p}_{eff}$ can be expressed as:
+\begin{equation}
+\hat{p}_{eff} = -i\hbar \frac{\partial}{\partial x} + \alpha \hbar \sqrt{R(x)}
+\end{equation}
+where $R(x)$ is the local curvature of the path. This formulation ensures mathematical consistency as both terms are now treated as scalars in the 1D subspace.
+
+
 
 \section{Conclusion of the law}
 \label{sec:model}
@@ -92,6 +101,13 @@ This makes the total momentum of the particle equal
     \hat{p}_{total} = -i\hbar\nabla + \alpha\hbar\sqrt{R} 
 \end{equation}
 
+
+\section{Modified Schrödinger Equation}
+The Hamiltonian operator $\hat{H} = \frac{\hat{p}_{eff}^2}{2m} + V(x)$ leads to:
+\begin{equation}
+\hat{H} \psi = \left[ -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} - \frac{i \alpha \hbar^2 \sqrt{R}}{m} \frac{\partial}{\partial x} + \frac{\alpha^2 \hbar^2 R}{2m} + V(x) \right] \psi = E\psi
+\end{equation}
+The second term represents a \textit{geometric vector potential} effect, while the third term acts as a \textit{curvature-induced potential}.
 \section{Impact of Modified Momentum on the Equations of Motion}
 
 In this model, the total momentum operator $\hat{p}_{total}$ incorporates a geometric correction term $Z(x) = \alpha\hbar\sqrt{R}$. The transition from standard quantum mechanics to curved spacetime mechanics modifies the kinetic energy operator $\hat{T}$ as follows:
@@ -326,7 +342,7 @@ The code in this repository is released under the MIT License. The full license 
 Online references:
 \begin{itemize}
   \item Repository: \url{https://github.com/scikyrollesashraf/Momentum-resulting-from-the-curvature-of-spacetime}
-  \item Citable archived release (Zenodo DOI):  \href{doi.org}{10.5281/zenodo.18203331}
+  \item Citable archived release (Zenodo DOI): \href{doi.org}{10.5281/zenodo.18203331}
   \item Creative Commons (CC BY 4.0) legal code: \url{https://creativecommons.org/licenses/by/4.0/}
   \item MIT License (text contained in the repository's LICENSE file).
 \end{itemize}
